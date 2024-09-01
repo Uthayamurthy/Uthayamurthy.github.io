@@ -1,0 +1,23 @@
+    <!-- navbar-->
+    <nav class="navbar navbar-expand-md  border-body">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">
+            <img src="/assets/images/logo.png" alt="Logo" width="40" height="30">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <div class="navbar-nav nav-underline mx-auto">
+                {% for item in site.data.navigation %}
+                    {% if page.current == item.name %}
+                        <a class="nav-link active" aria-current="page" href="{{ item.link }}">{{ item.name }}</a>
+                    {% else %}
+                        <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+                    {% endif %}             
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!-- navbar ends-->

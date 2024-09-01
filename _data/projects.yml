@@ -1,0 +1,131 @@
+# Simply Update
+- title: "Simply Update"
+  img_src: "assets/images/unreleased.svg"
+  img_alt: "Question Mark"
+  img_height: "150"
+  img_width: "150"
+  tags: ["Unreleased"]
+  description: "A Framework to enable python applications update themselves !"
+  unreleased: true
+  date: "2024"
+
+# SHARP
+- title: "SHARP"
+  subtitle: "(**S**mart **H**ome **A**utomation **R**esearch **P**roject)"
+  img_src: "assets/images/SHARP.svg"
+  img_alt: "SHARP-Logo"
+  img_height: "150"
+  img_width: "150"
+  tags: ["Under Active Development !", "Open Source"]
+  description: "A Flask Application to control and automate smart home devices."
+  github_link: "https://github.com/Uthayamurthy/SHARP"
+  video_link: "https://drive.google.com/file/d/1fiYBWEgvNcOzQ9FvvY1tlHamog_6RHZZ/view?usp=sharing"
+  date: "2024"
+
+# TURPO
+- title: "TURPO"
+  subtitle: "(**T**rustworthy **U**tility for **R**eliable **P**assword **O**rganisation)"
+  img_src: "assets/images/turpo.svg"
+  img_alt: "TURPO-Logo"
+  img_height: "150"
+  img_width: "150"
+  tags: ["Under Active Development !", "Open Source"]
+  description: "A simple to use, feature-rich, free and Open-Source Password Management Software for Linux and Windows."
+  github_link: "https://github.com/Uthayamurthy/TURPO"
+  date: "2023-24"
+
+# S3
+- title: "S3"
+  subtitle: "(**S**implified **S**QL **S**hell)"
+  img_src: "assets/images/S3.png"
+  img_alt: "S3 Screenshot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Maintenance Only", "Open Source"]
+  description: "A user-friendly, cross-platform SQL Shell which features colourful text and emojis along with handy shortcuts."
+  github_link: "https://github.com/Uthayamurthy/S3"
+  video_link: "https://drive.google.com/file/d/1Y3TuhlDBqaXAJxNWRDDgZP7lIiGiyo2I/view"
+  date: "2023"
+
+# Project Danny
+- title: "Project Danny"
+  img_src: "assets/images/danny.png"
+  img_alt: "Project Danny"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Scientific"]
+  description: "A Python Program to analyse the experimental results of building a bunch of Daniel cells with different concentration of electrolytes and provide comprehensive reports along with"
+  project_page: "/project_pages/Danny.html"
+  video_link: "https://drive.google.com/file/d/1nDBDSTGis54PhNdNN9XuZCx4iqx2T8WM/view?usp=sharing"
+  date: "2023"
+
+# Pentagon
+- title: "Pentagon"
+  img_src: "assets/images/pentagon.png"
+  img_alt: "Pentagon Screenshot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Decommissioned !", "Open Source"]
+  description: "A Django Powered Form Application. Pentagon is primarily configured to be a school admission form application, but can be configured as per requirement to make other forms."
+  github_link: "https://github.com/Uthayamurthy/Pentagon"
+  video_link: "https://drive.google.com/file/d/1W8E-kGiWyf6TzFZHq9hPbFgbtHnDoG6p/view"
+  date: "2023"
+
+# Gardeneon
+- title: "Gardeneon"
+  img_src: "assets/images/gardeneon.jpg"
+  img_alt: "Gardeneon"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Actively Deployed !", "Closed Source", "Hardware + Software"]
+  description: "A Smart Home irrigation controller, connected to wifi and mqtt. Keeps our terrace garden alive !"
+  project_page: "/project_pages/Gardeneon.html"
+  video_link: "https://drive.google.com/file/d/17VTn-KhAJPmlu3azoM0mnhZEGd2zT1qD/view?usp=sharing"
+  date: "2020-24"
+
+# Photon
+- title: "Photon"
+  img_src: "assets/images/photon.jpeg"
+  img_alt: "Photon"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Actively Deployed !", "Closed Source", "Hardware + Software"]
+  description: "A Smart Home switch, connected to wifi and mqtt. Primarily meant to control lights."
+  project_page: "/project_pages/Photon.html"
+  video_link: "https://drive.google.com/file/d/16Lqepesy4jmlXIludRf4tuY9v5rOwGqv/view?usp=sharing"
+  date: "2019-24"
+
+# ConfigManager-Micropython
+- title: "ConfigManager-Micropython"
+  img_src: "assets/images/configmgr.png"
+  img_alt: "ConfigManager-Micropython"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Maintenance Only", "Open Source"]
+  description: "A Library to enable Micropython devices to save and load configurations for devices. Used in Photon and Gardeneon."
+  github_link: "https://github.com/Uthayamurthy/ConfigManager-Micropython"
+  date: "2021-23"
+
+# Cleanbot
+- title: "Cleanbot"
+  img_src: "assets/images/cleanbot.png"
+  img_alt: "Cleanbot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Decommissioned !", "Closed Source", "Hardware + Software"]
+  description: "A cleaning robot powered by Arduino. Created to clean dry as well as wet floors ... It was a Honorable failure"
+  project_page: "/project_pages/Cleanbot.html"
+  video_link: "https://drive.google.com/file/d/1pJBe0mGOvWPKVIvmuhq_sLvML8RZZk0m/view?usp=sharing"
+  date: "2018"
+
+# Rover
+- title: "Rover"
+  img_src: "assets/images/rover.png"
+  img_alt: "Rover"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Decommissioned !", "Closed Source", "Hardware + Software"]
+  description: "A Raspberry pi powered rover with audio and vision capabilitities. Created to demonstrate the capabilities of rocker bogie design. Inspired by NASA's Curiosity rover."
+  project_page: "/project_pages/Rover.html"
+  video_link: "https://drive.google.com/file/d/1a9TiW89ZwWnml0HUECRnmathqpwDom0N/view?usp=sharing"
+  date: "2018"

@@ -1,0 +1,89 @@
+---
+layout: default
+current: Projects
+---
+
+<div class="container-md text-center mt-4 mb-2">
+    <h1 class="display-1">Gardeneon</h1>
+    <p class="text-muted lead"><i class="bi bi-calendar-fill"></i> 2020-24</p>
+</div>
+
+
+<div class="container-md p-5 my-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div id="carouselCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/assets/images/Gardeneon/gardeneon.jpg" class="d-block w-100" alt="Gardeneon" height="400px" width="800px">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Gardeneon</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/Gardeneon/solenoid-valve.jpg" class="d-block w-100" alt="solenoid-valve" height="400px" width="800px">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Insulated Solenoid Valves</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/Gardeneon/incase.png" class="d-block w-100" alt="Gardeneon in Case" height="400px" width="800px">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Gardeneon In Case</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/Gardeneon/gardeneon-me.jpg" class="d-block w-100" alt="Gardeneon with Me" height="400px" width="800px">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Gardeneon With Me !</h5>
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center m-3 text-center">
+        <div class="col-md-8">
+            <p>
+                Gardeneon is a Smart Home irrigation controller, created to water our terrace garden. Back in 2020 when it was created, I was using KDE Neon Linux Distro, hence it's name. It is probably my most useful creation till date.
+            </p>
+            <p>
+                Gardeneon controls solenoid valves (which are like electronic taps). These solenoid valves stand between water supply and drip irrigation system. So, effectively, gardeneon can water plants by turning on the solenoid valves !
+            </p>
+            <p>
+                Following are it's features:
+                <ul>
+                    <li>It is connected to wifi and mqtt broker in our lan. So, can be controlled from anywhere inside home.</li>
+                    <li>Supports 4 channels, which means it can control upto 4 solenoid valves.</li>
+                    <li>Fully integrated with <a href="https://github.com/Uthayamurthy/SHARP"> SHARP </a> </li>
+                    <li>SHARP integration makes automations seemless. Just set the time and never worry about watering plants again.</li>
+                    <li>It has an oled display to show status of valves and other useful details.</li>
+                    <li>It also has a buzzer to provide audio feedback when the valves are turned on or off. The buzzer can later be used as an alarm as well.</li>
+                    <li>Supports Over the air updates for the firmware.</li>
+                </ul>
+            </p>
+            <p> So, Gardeneon keeps our terrace garden alive !!</p>
+            <a href="https://drive.google.com/file/d/17VTn-KhAJPmlu3azoM0mnhZEGd2zT1qD/view?usp=sharing" target="_blank" class="btn btn-outline-secondary m-1"><i class="bi bi-play-btn"></i> Watch SHARP + Gardeneon in Action</a>
+
+            <br><br>
+            <p>
+                <strong>TODO: </strong> A better demo video.
+            </p>
+        </div>
+    </div>
+</div>

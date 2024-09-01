@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<rect x="7.932" y="7.863" style="fill:#C8546F;" width="496.132" height="464.124"/>
+<polyline style="fill:#9B4573;" points="504.068,7.863 504.068,471.989 7.932,471.989 "/>
+<rect x="47.943" y="47.874" style="fill:#FEC986;" width="416.117" height="384.109"/>
+<circle style="fill:#9B4573;" cx="191.986" cy="239.93" r="80.026"/>
+<rect x="47.943" y="47.874" style="fill:#FEB860;" width="416.117" height="40.008"/>
+<circle style="fill:#C8546F;" cx="191.986" cy="239.93" r="32.009"/>
+<rect x="47.943" y="391.972" style="fill:#FEB860;" width="416.117" height="40.008"/>
+<g>
+	<path style="fill:#1D1D1B;" d="M471.92,439.842H40.08V40.011h431.839v399.831H471.92z M55.806,424.115h400.386V55.737H55.806
+		V424.115z"/>
+	<path style="fill:#1D1D1B;" d="M511.931,0H0.069v479.852h24.007V512h15.726v-32.148h432.67V512h15.726v-32.148h23.732L511.931,0
+		L511.931,0z M496.204,464.126H15.795v-448.4h480.409V464.126z"/>
+	<path style="fill:#1D1D1B;" d="M191.983,327.811c-48.46,0-87.885-39.425-87.885-87.885s39.425-87.885,87.885-87.885
+		s87.885,39.425,87.885,87.885S240.442,327.811,191.983,327.811z M191.983,167.768c-39.788,0-72.158,32.37-72.158,72.158
+		s32.37,72.158,72.158,72.158s72.158-32.37,72.158-72.158S231.771,167.768,191.983,167.768z"/>
+	<path style="fill:#1D1D1B;" d="M199.846,200.837V183.91H184.12v16.927c-18.232,3.661-32.009,19.795-32.009,39.089
+		c0,21.985,17.887,39.871,39.872,39.871s39.871-17.886,39.871-39.871C231.854,220.632,218.078,204.499,199.846,200.837z
+		 M191.983,264.071c-13.314,0-24.146-10.832-24.146-24.145c0-12.444,9.462-22.716,21.568-24.007h5.155
+		c12.106,1.291,21.568,11.563,21.568,24.007C216.128,253.24,205.296,264.071,191.983,264.071z"/>
+</g>
+<g>
+	<rect x="328.018" y="184.05" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="360.027" y="184.05" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="392.035" y="184.05" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="328.018" y="216.058" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="360.027" y="216.058" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="392.035" y="216.058" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="328.018" y="248.066" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="360.027" y="248.066" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="392.035" y="248.066" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="328.018" y="280.074" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="360.027" y="280.074" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="392.035" y="280.074" style="fill:#FFFFFF;" width="16.005" height="15.726"/>
+	<rect x="184.123" y="231.92" style="fill:#FFFFFF;" width="15.726" height="16.004"/>
+</g>
+<g>
+	<rect x="71.953" y="384.109" style="fill:#1D1D1B;" width="368.099" height="15.726"/>
+	<rect x="71.953" y="80.026" style="fill:#1D1D1B;" width="368.099" height="15.726"/>
+</g>
+</svg>

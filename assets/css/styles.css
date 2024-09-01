@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Kalam', cursive;
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-pic-mini {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.background-gradient {
+  background: #eeebeb;
+  background: radial-gradient(#eeebeb, #f5f2ef);
+}
+
+.typing-text {
+    color: #2F7597;
+  }
+  
+.typing-text::after {
+    content: "|";
+    animation: blink 1s step-end infinite;
+  }
+
+.special-text {
+  font-size: 140px;
+}
+
+.img-shadow {
+  filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5)); 
+}

@@ -1,0 +1,26 @@
+- name: "Under Active Development !"
+  theme: "text-bg-success"
+
+- name: "Maintenance Only"
+  theme: "text-bg-info"
+
+- name: "Unreleased"
+  theme: "text-bg-info"
+
+- name: "Actively Deployed !"
+  theme: "text-bg-success"
+
+- name: "Decommissioned !"
+  theme: "text-bg-danger"
+
+- name: "Closed Source"
+  theme: "text-bg-secondary"
+
+- name: "Open Source"
+  theme: "text-bg-success"
+
+- name: "Hardware + Software"
+  theme: "text-bg-primary"
+
+- name: "Scientific"
+  theme: "text-bg-primary"

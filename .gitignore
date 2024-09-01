@@ -1,0 +1,5 @@
+# Jekyll Stuff
+Gemfile.lock
+_site/
+.jekyll-cache/
+.sass-cache/

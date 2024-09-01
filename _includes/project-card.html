@@ -1,0 +1,39 @@
+<div class="row  border border-secondary p-3 m-3">
+
+    <div class="col-md-4 my-1">
+      <img src="{{ include.img_src }}" class="img-fluid img-shadow" alt="{{ include.img_alt }}" height="{{ include.img_height }}" width="{{ include.img_width }}">
+    </div>
+
+    <div class="col-md-6 my-1">
+      <h2 class = "h2">{{ include.title }}</h2>
+      {% if include.subtitle %}
+        <h6 class = "h6 text-muted"> {{ include.subtitle | markdownify }} </h6>
+      {% endif %}
+      {% for tag in include.tags %}
+        {% for project_tag in site.data.project-tags %}
+            {% if project_tag.name == tag %}
+                {% assign badge_theme = project_tag.theme %}
+            {% endif %}
+        {% endfor %}
+        <span class="badge {{ badge_theme }} my-2">{{ tag }}</span>
+      {% endfor %}
+      <p class="lead">{{ include.description }}</p>
+      {% if include.unreleased %}
+        <p class="h5 text-muted"> Coming Soon !! </p>
+      {% endif %}
+      {% if include.github_link %}
+        <a href="{{ include.github_link }}" target="_blank" class="btn btn-outline-secondary m-1"><i class="bi bi-github"></i> View Repo</a>
+      {% endif %}
+      {% if include.project_page %}
+        <a href="{{ include.project_page }}" class="btn btn-outline-secondary m-1"><i class="bi bi-info-square"></i> View Project Page </a>
+      {% endif %}
+      {% if include.video_link %}
+        <a href="{{ include.video_link }}" target="_blank" class="btn btn-outline-secondary m-1"><i class="bi bi-play-btn"></i> Watch Demo</a>
+      {% endif %}
+    </div>
+
+    <div class="col-md-2  text-muted p-1">
+      <i class="bi bi-calendar-fill"></i> {{ include.date }}
+    </div>
+
+  </div>
