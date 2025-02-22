@@ -1,3 +1,15 @@
+# Code2Algo
+- title: "Code2Algo"
+  img_src: "assets/images/Code2Algo.png"
+  img_alt: "Code2Algo screenshot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Open Source"]
+  description: "An AI Powered Tool to generate Algorithm and Flowchart from your source code"
+  github_link: "https://github.com/Uthayamurthy/Code2Algo"
+  video_link: "https://www.youtube.com/watch?v=fqsvnz2BExI"
+  date: "2025"
+
 # VAWL
 - title: "VAWL"
   subtitle: "(**V**osk **A**s **W**akeword **L**istener)"
