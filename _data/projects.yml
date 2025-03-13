@@ -1,3 +1,14 @@
+# Study Flow
+- title: "Study Flow"
+  img_src: "assets/images/studyflow.png"
+  img_alt: "Study Flow screenshot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Open Source"]
+  description: "An AI Powered Study Assistant. I built the backend for this project"
+  github_link: "https://github.com/Uthayamurthy/studyflow"
+  date: "2025"
+
 # Code2Algo
 - title: "Code2Algo"
   img_src: "assets/images/Code2Algo.png"
@@ -5,7 +16,7 @@
   img_height: "400"
   img_width: "400"
   tags: ["Open Source"]
-  description: "An AI Powered Tool to generate Algorithm and Flowchart from your source code"
+  description: "An AI Powered Tool to generate Algorithm and Flowchart from your source code."
   github_link: "https://github.com/Uthayamurthy/Code2Algo"
   video_link: "https://www.youtube.com/watch?v=fqsvnz2BExI"
   date: "2025"
