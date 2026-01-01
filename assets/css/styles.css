@@ -1,8 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-gradient: radial-gradient(#eeebeb, #f5f2ef); 
+  --text-color: #212529;
+  
+  --card-bg: transparent; 
+  
+  --border-color: #6c757d; 
+}
+
+[data-bs-theme="dark"] {
+  --bg-gradient: #121212; 
+  --text-color: #e0e0e0;
+
+  --card-bg: #1e1e1e; 
+  --border-color: #495057;
+}
+
+.background-gradient {
+  background: var(--bg-gradient);
+}
 
 body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .kalam-font {
   font-family: 'Kalam', cursive;
 }
+
 .profile-pic {
     border-radius: 50%;
     width: 200px;
@@ -15,11 +44,6 @@ body {
   width: 25px;
   height: 25px;
   object-fit: cover;
-}
-
-.background-gradient {
-  background: #eeebeb;
-  background: radial-gradient(#eeebeb, #f5f2ef);
 }
 
 .typing-text {
@@ -37,4 +61,11 @@ body {
 
 .img-shadow {
   filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5)); 
+}
+
+.card, .row.border {
+  background-color: var(--card-bg);
+  border-color: var(--border-color) !important;
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
