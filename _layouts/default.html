@@ -33,9 +33,13 @@
   <!-- Copyright Notice -->
   <footer class="footer bg-body-secondary-subtle text-center mt-auto py-3">
     <div class="container">
-      <span class="text-muted">Copyright <i class="bi bi-c-square"></i> 2025 - <a class="text-muted text-decoration-none" href="https://github.com/Uthayamurthy" target="_blank">R Uthaya Murthy</a> - All Rights Reserved</span>
+      Copyright <i class="bi bi-c-square"></i> <span id="copyright-year"></span> - <a class="text-muted text-decoration-none" href="https://github.com/Uthayamurthy" target="_blank">R Uthaya Murthy</a> - All Rights Reserved
     </div>
   </footer>
+
+  <script>
+    document.getElementById('copyright-year').innerText = new Date().getFullYear();
+  </script>
 
 
   </body>
