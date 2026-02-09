@@ -291,6 +291,98 @@ a:hover {
 }
 
 /* ============================================
+   Skills Section (Homepage)
+   ============================================ */
+
+.skills-section {
+  padding-top: 1.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
+
+.skill-group-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.25rem;
+  height: 100%;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.skill-group-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--accent);
+}
+
+.skill-group-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.95rem;
+}
+
+.skill-group-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-subtle);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.skill-group-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.skill-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.skill-chip:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+  transform: translateY(-1px);
+}
+
+.skill-chip-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.skill-chip-logo {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  object-fit: contain;
+}
+
+/* ============================================
    Project Filter Tabs
    ============================================ */
 
@@ -703,6 +795,15 @@ a:hover {
 
   .project-card {
     padding: 1.25rem;
+  }
+
+  .skills-section {
+    padding-top: 1rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  .skill-group-card {
+    padding: 1rem;
   }
 }
 

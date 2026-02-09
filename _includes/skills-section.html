@@ -1,0 +1,46 @@
+{% assign skills_data = site.data.skills %}
+{% if skills_data and skills_data.groups %}
+<section class="skills-section py-5">
+  <div class="container">
+    <div class="text-center mb-4 fade-in-up">
+      <h2 class="section-title">
+        <i class="{{ skills_data.section.icon | default: 'bi bi-lightning-charge' }}"></i>
+        {{ skills_data.section.title | default: 'Skills & Tech Stack' }}
+      </h2>
+      {% if skills_data.section.subtitle %}
+        <p class="section-subtitle">{{ skills_data.section.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      {% for group in skills_data.groups %}
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="skill-group-card animate-on-scroll" id="skills-{{ group.key | default: forloop.index }}">
+            <header class="skill-group-head">
+              <span class="skill-group-icon" aria-hidden="true">
+                <i class="{{ group.icon | default: 'bi bi-circle' }}"></i>
+              </span>
+              <h3 class="skill-group-title">{{ group.title }}</h3>
+            </header>
+
+            <div class="skill-chip-list">
+              {% for item in group.items %}
+                <span class="skill-chip">
+                  {% if item.logo %}
+                    <img class="skill-chip-logo" src="{{ item.logo }}" alt="{{ item.name }} logo" loading="lazy" width="18" height="18">
+                  {% elsif item.icon_class %}
+                    <i class="skill-chip-icon {{ item.icon_class }}" aria-hidden="true"></i>
+                  {% else %}
+                    <i class="skill-chip-icon bi bi-check2-circle" aria-hidden="true"></i>
+                  {% endif %}
+                  <span>{{ item.name }}</span>
+                </span>
+              {% endfor %}
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
