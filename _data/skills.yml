@@ -83,6 +83,7 @@ groups:
     items:
       - name: "Linux"
         icon_class: "devicon-linux-plain"
+        easter_egg: "arch_btw"
       - name: "Git and GitHub"
         icon_class: "devicon-git-plain"
       - name: "SSH workflows"

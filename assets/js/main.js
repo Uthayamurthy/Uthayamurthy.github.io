@@ -167,3 +167,82 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 })();
+
+// --- Linux Skill Easter Egg (homepage only) ---
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const triggers = document.querySelectorAll('.linux-easter-egg-trigger[data-easter-egg="arch_btw"]');
+    const popup = document.getElementById('linux-easter-egg');
+    const popupWindow = popup ? popup.querySelector('.linux-terminal-window') : null;
+    if (!triggers.length || !popup || !popupWindow) return;
+
+    let hideTimer;
+    let lastTrigger = null;
+
+    function positionLinuxEgg(trigger) {
+      if (!trigger) return;
+
+      const gap = 12;
+      const margin = window.innerWidth < 768 ? 10 : 14;
+      const triggerRect = trigger.getBoundingClientRect();
+      const popupWidth = popupWindow.offsetWidth;
+      const popupHeight = popupWindow.offsetHeight;
+
+      let left = triggerRect.left + (triggerRect.width / 2) - (popupWidth / 2);
+      let top = triggerRect.top - popupHeight - gap;
+
+      // If there is not enough room above the chip, place the popup below it.
+      if (top < margin) {
+        top = triggerRect.bottom + gap;
+      }
+
+      left = Math.max(margin, Math.min(left, window.innerWidth - popupWidth - margin));
+      top = Math.max(margin, Math.min(top, window.innerHeight - popupHeight - margin));
+
+      popup.style.left = Math.round(left) + 'px';
+      popup.style.top = Math.round(top) + 'px';
+    }
+
+    function hideLinuxEgg() {
+      popup.classList.remove('is-visible');
+      popup.setAttribute('aria-hidden', 'true');
+      if (hideTimer) clearTimeout(hideTimer);
+    }
+
+    function showLinuxEgg(event) {
+      lastTrigger = event.currentTarget;
+      positionLinuxEgg(lastTrigger);
+
+      popup.classList.remove('is-visible');
+      void popup.offsetWidth; // restart CSS animation on repeated clicks
+      popup.classList.add('is-visible');
+      popup.setAttribute('aria-hidden', 'false');
+
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = setTimeout(function () {
+        hideLinuxEgg();
+      }, 4200);
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', showLinuxEgg);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') hideLinuxEgg();
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!popup.classList.contains('is-visible')) return;
+      if (event.target.closest('.linux-easter-egg-trigger')) return;
+      if (event.target.closest('#linux-easter-egg')) return;
+      hideLinuxEgg();
+    });
+
+    window.addEventListener('resize', function () {
+      if (popup.classList.contains('is-visible') && lastTrigger) {
+        positionLinuxEgg(lastTrigger);
+      }
+    });
+  });
+})();

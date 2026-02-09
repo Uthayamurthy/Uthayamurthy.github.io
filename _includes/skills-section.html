@@ -25,21 +25,59 @@
 
             <div class="skill-chip-list">
               {% for item in group.items %}
-                <span class="skill-chip">
-                  {% if item.logo %}
-                    <img class="skill-chip-logo" src="{{ item.logo }}" alt="{{ item.name }} logo" loading="lazy" width="18" height="18">
-                  {% elsif item.icon_class %}
-                    <i class="skill-chip-icon {{ item.icon_class }}" aria-hidden="true"></i>
-                  {% else %}
-                    <i class="skill-chip-icon bi bi-check2-circle" aria-hidden="true"></i>
-                  {% endif %}
-                  <span>{{ item.name }}</span>
-                </span>
+                {% if item.easter_egg %}
+                  <button
+                    type="button"
+                    class="skill-chip skill-chip-button linux-easter-egg-trigger"
+                    data-easter-egg="{{ item.easter_egg }}"
+                    aria-label="{{ item.name }} easter egg"
+                  >
+                    {% if item.logo %}
+                      <img class="skill-chip-logo" src="{{ item.logo }}" alt="{{ item.name }} logo" loading="lazy" width="18" height="18">
+                    {% elsif item.icon_class %}
+                      <i class="skill-chip-icon {{ item.icon_class }}" aria-hidden="true"></i>
+                    {% else %}
+                      <i class="skill-chip-icon bi bi-check2-circle" aria-hidden="true"></i>
+                    {% endif %}
+                    <span>{{ item.name }}</span>
+                  </button>
+                {% else %}
+                  <span class="skill-chip">
+                    {% if item.logo %}
+                      <img class="skill-chip-logo" src="{{ item.logo }}" alt="{{ item.name }} logo" loading="lazy" width="18" height="18">
+                    {% elsif item.icon_class %}
+                      <i class="skill-chip-icon {{ item.icon_class }}" aria-hidden="true"></i>
+                    {% else %}
+                      <i class="skill-chip-icon bi bi-check2-circle" aria-hidden="true"></i>
+                    {% endif %}
+                    <span>{{ item.name }}</span>
+                  </span>
+                {% endif %}
               {% endfor %}
             </div>
           </article>
         </div>
       {% endfor %}
+    </div>
+  </div>
+
+  <div id="linux-easter-egg" class="linux-easter-egg" role="status" aria-live="polite" aria-hidden="true">
+    <div class="linux-terminal-window">
+      <div class="linux-terminal-topbar">
+        <span class="linux-terminal-dot linux-terminal-dot-red"></span>
+        <span class="linux-terminal-dot linux-terminal-dot-amber"></span>
+        <span class="linux-terminal-dot linux-terminal-dot-green"></span>
+        <span class="linux-terminal-title">terminal</span>
+      </div>
+      <div class="linux-terminal-body">
+        <p class="linux-terminal-line">
+          <span class="linux-terminal-prompt">uthay@arch</span>
+          <span class="linux-terminal-path">:~</span>
+          <span>$</span>
+          <span class="linux-terminal-command">echo "I use Arch, btw."</span>
+        </p>
+        <p class="linux-terminal-output">I use Arch, btw.</p>
+      </div>
     </div>
   </div>
 </section>
