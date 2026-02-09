@@ -1,0 +1,8 @@
+# Teammates data file
+# Add team members you've worked with on projects.
+# Reference them by their id in projects.yml under the "teammates" field.
+
+- id: "placeholder_teammate"
+  name: "Teammate Name"
+  github: "https://github.com/placeholder"
+  github_username: "placeholder"

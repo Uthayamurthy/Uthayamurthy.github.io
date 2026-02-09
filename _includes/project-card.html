@@ -1,39 +1,65 @@
-<div class="row  border border-secondary p-3 m-3">
+<div class="project-card animate-on-scroll" data-project-type="{{ include.project_type }}">
+  <div class="row g-3 align-items-center">
 
-    <div class="col-md-4 my-1">
-      <img src="{{ include.img_src }}" class="img-fluid img-shadow" alt="{{ include.img_alt }}" height="{{ include.img_height }}" width="{{ include.img_width }}">
+    <div class="col-md-4">
+      <img src="{{ include.img_src }}" class="img-fluid project-img" alt="{{ include.img_alt }}" loading="lazy" width="{{ include.img_width }}" height="{{ include.img_height }}">
     </div>
 
-    <div class="col-md-6 my-1">
-      <h2 class = "h2">{{ include.title }}</h2>
+    <div class="col-md-6">
+      <h2 class="project-title">{{ include.title }}</h2>
       {% if include.subtitle %}
-        <h6 class = "h6 text-muted"> {{ include.subtitle | markdownify }} </h6>
+        <p class="project-subtitle">{{ include.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}</p>
       {% endif %}
-      {% for tag in include.tags %}
-        {% for project_tag in site.data.project-tags %}
-            {% if project_tag.name == tag %}
-                {% assign badge_theme = project_tag.theme %}
-            {% endif %}
+
+      <div class="mb-2">
+        {% for tag in include.tags %}
+          {% for project_tag in site.data.project-tags %}
+              {% if project_tag.name == tag %}
+                  {% assign badge_theme = project_tag.theme %}
+              {% endif %}
+          {% endfor %}
+          <span class="badge {{ badge_theme }}">{{ tag }}</span>
         {% endfor %}
-        <span class="badge {{ badge_theme }} my-2">{{ tag }}</span>
-      {% endfor %}
-      <p class="lead">{{ include.description }}</p>
+      </div>
+
+      <p class="project-description">{{ include.description }}</p>
+
       {% if include.unreleased %}
-        <p class="h5 text-muted"> Coming Soon !! </p>
+        <p class="text-muted fw-medium"><i class="bi bi-clock"></i> Coming Soon</p>
       {% endif %}
-      {% if include.github_link %}
-        <a href="{{ include.github_link }}" target="_blank" class="btn btn-outline-secondary m-1"><i class="bi bi-github"></i> View Repo</a>
-      {% endif %}
-      {% if include.project_page %}
-        <a href="{{ include.project_page }}" class="btn btn-outline-secondary m-1"><i class="bi bi-info-square"></i> View Project Page </a>
-      {% endif %}
-      {% if include.video_link %}
-        <a href="{{ include.video_link }}" target="_blank" class="btn btn-outline-secondary m-1"><i class="bi bi-play-btn"></i> Watch Demo</a>
+
+      <div class="d-flex flex-wrap gap-2 mt-2">
+        {% if include.github_link %}
+          <a href="{{ include.github_link }}" target="_blank" class="btn btn-outline-accent btn-sm"><i class="bi bi-github"></i> View Repo</a>
+        {% endif %}
+        {% if include.project_page %}
+          <a href="{{ include.project_page }}" class="btn btn-outline-accent btn-sm"><i class="bi bi-info-circle"></i> Project Page</a>
+        {% endif %}
+        {% if include.video_link %}
+          <a href="{{ include.video_link }}" target="_blank" class="btn btn-outline-accent btn-sm"><i class="bi bi-play-circle"></i> Watch Demo</a>
+        {% endif %}
+      </div>
+
+      {% if include.teammates %}
+        <div class="teammate-list mt-3">
+          <span class="teammates-label"><i class="bi bi-people-fill"></i> Team:</span>
+          {% for teammate_id in include.teammates %}
+            {% for mate in site.data.teammates %}
+              {% if mate.id == teammate_id %}
+                <a href="{{ mate.github }}" target="_blank" class="teammate-chip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ mate.name }}">
+                  <img src="https://github.com/{{ mate.github_username }}.png?size=44" alt="{{ mate.name }}" loading="lazy">
+                  {{ mate.name }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
       {% endif %}
     </div>
 
-    <div class="col-md-2  text-muted p-1">
-      <i class="bi bi-calendar-fill"></i> {{ include.date }}
+    <div class="col-md-2 text-end">
+      <span class="project-date"><i class="bi bi-calendar3"></i> {{ include.date }}</span>
     </div>
 
   </div>
+</div>

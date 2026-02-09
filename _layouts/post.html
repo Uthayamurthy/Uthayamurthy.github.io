@@ -2,9 +2,13 @@
 layout: default
 ---
 
-<div class="container-md text-center mt-4 mb-2">
-    <h1 class="display-1">{{ page.title }}</h1>
-    <p>{{ page.date | date_to_string }}</p>
-</div>
-<hr>
-{{ content }}
+<article>
+  <div class="container text-center mt-4 mb-2">
+    <h1 class="section-title fade-in-up">{{ page.title }}</h1>
+    <p class="section-subtitle fade-in-up-delay-1">{{ page.date | date_to_string }}</p>
+  </div>
+  <hr class="my-3" style="max-width: 200px; margin-left: auto; margin-right: auto; border-color: var(--border-color);">
+  <div class="fade-in-up-delay-2">
+    {{ content }}
+  </div>
+</article>
