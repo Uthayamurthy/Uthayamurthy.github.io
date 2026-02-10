@@ -194,6 +194,7 @@ a:hover {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.75rem;
+  line-height: 1.15;
 }
 
 .hero-tagline {
@@ -425,7 +426,7 @@ a:hover {
 }
 
 .linux-terminal-window {
-  width: min(360px, calc(100vw - 2rem));
+  width: min(400px, calc(100vw - 2rem));
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #2f3f4f;
@@ -503,6 +504,18 @@ a:hover {
   margin: 0;
   font-size: 0.86rem;
   line-height: 1.6;
+}
+
+.linux-terminal-logo-line {
+  margin: 0.35rem 0 0.2rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.linux-terminal-arch-logo {
+  font-size: 2.35rem;
+  color: #1793d1;
+  text-shadow: 0 0 8px rgba(23, 147, 209, 0.35);
 }
 
 .linux-terminal-prompt {
@@ -1001,6 +1014,13 @@ a:hover {
   .linux-easter-egg {
     left: 0.85rem;
     top: 0.85rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-name {
+    font-size: clamp(2.1rem, 3.4vw, 2.75rem);
+    white-space: nowrap;
   }
 }
 
