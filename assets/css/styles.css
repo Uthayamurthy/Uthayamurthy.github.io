@@ -180,6 +180,25 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
+.profile-pic-spin {
+  animation: profilePicSpin 0.9s cubic-bezier(0.18, 0.9, 0.3, 1.15) 1;
+}
+
+@keyframes profilePicSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  35% {
+    transform: rotate(170deg) scale(1.08);
+  }
+  70% {
+    transform: rotate(320deg) scale(0.97);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
 .hero-greeting {
   font-size: 1.1rem;
   color: var(--text-secondary);
@@ -575,7 +594,9 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .linux-easter-egg,
   .linux-easter-egg.is-visible .linux-terminal-output,
-  .linux-easter-egg.is-visible .linux-terminal-body::before {
+  .linux-easter-egg.is-visible .linux-terminal-body::before,
+  .profile-pic-spin,
+  .konami-char {
     animation: none !important;
     transition: none !important;
   }
@@ -583,6 +604,11 @@ a:hover {
   .linux-terminal-output {
     width: auto;
     border-right: 0;
+  }
+
+  .konami-overlay,
+  .easter-toast {
+    transition: none !important;
   }
 
 }
@@ -727,6 +753,22 @@ a:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
+}
+
+.teammate-avatar-fallback {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.teammate-chip-static {
+  cursor: default;
 }
 
 .teammate-chip .bi {
@@ -882,6 +924,19 @@ a:hover {
   color: var(--accent);
 }
 
+.footer-year-trigger {
+  cursor: pointer;
+  border-bottom: 1px dashed transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.footer-year-trigger:hover,
+.footer-year-trigger:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  outline: none;
+}
+
 .footer-social-link {
   display: inline-flex;
   align-items: center;
@@ -900,6 +955,79 @@ a:hover {
   color: #fff;
   background-color: var(--accent);
   border-color: var(--accent);
+}
+
+/* ============================================
+   Easter Egg UI
+   ============================================ */
+
+.easter-toast-container {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.45rem;
+  pointer-events: none;
+}
+
+.easter-toast {
+  max-width: min(360px, calc(100vw - 2rem));
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: var(--shadow-md);
+  font-size: 0.82rem;
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.easter-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.konami-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background: linear-gradient(180deg, rgba(1, 12, 8, 0.08) 0%, rgba(1, 12, 8, 0.45) 100%);
+}
+
+.konami-overlay.is-visible {
+  opacity: 1;
+}
+
+.konami-char {
+  position: absolute;
+  top: -14vh;
+  left: var(--x);
+  color: #69f786;
+  opacity: var(--opacity);
+  font-size: var(--size);
+  text-shadow: 0 0 8px rgba(73, 255, 139, 0.6);
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  will-change: transform;
+  animation: matrixFall var(--duration) linear var(--delay) infinite;
+}
+
+@keyframes matrixFall {
+  from {
+    transform: translateY(-10vh);
+  }
+  to {
+    transform: translateY(120vh);
+  }
 }
 
 /* ============================================

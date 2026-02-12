@@ -8,6 +8,37 @@ document.addEventListener('DOMContentLoaded', function () {
   [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
 });
 
+function showEasterToast(message, duration) {
+  const lifetime = typeof duration === 'number' ? duration : 2400;
+  let container = document.getElementById('easter-toast-container');
+
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'easter-toast-container';
+    container.className = 'easter-toast-container';
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement('div');
+  toast.className = 'easter-toast';
+  toast.textContent = message;
+  container.appendChild(toast);
+
+  requestAnimationFrame(function () {
+    toast.classList.add('is-visible');
+  });
+
+  window.setTimeout(function () {
+    toast.classList.remove('is-visible');
+    window.setTimeout(function () {
+      if (toast.parentNode) toast.parentNode.removeChild(toast);
+      if (container && !container.children.length && container.parentNode) {
+        container.parentNode.removeChild(container);
+      }
+    }, 220);
+  }, lifetime);
+}
+
 // --- Dark Mode Toggle ---
 (function () {
   const STORAGE_KEY = 'theme-preference';
@@ -72,13 +103,37 @@ document.addEventListener('DOMContentLoaded', function () {
   if (el) el.innerText = new Date().getFullYear();
 });
 
+
+
+// --- Profile Picture Easter Egg (homepage only) ---
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const profilePic = document.querySelector('.profile-pic');
+    if (!profilePic) return;
+
+    function triggerProfileEgg() {
+      profilePic.classList.remove('profile-pic-spin');
+      void profilePic.offsetWidth;
+      profilePic.classList.add('profile-pic-spin');
+      showEasterToast("It's not a bug, it's a feature", 2600);
+    }
+
+    profilePic.addEventListener('dblclick', triggerProfileEgg);
+    profilePic.addEventListener('animationend', function (event) {
+      if (event.animationName === 'profilePicSpin') {
+        profilePic.classList.remove('profile-pic-spin');
+      }
+    });
+  });
+})();
+
 // --- Typing Animation (homepage only) ---
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
     const typingElement = document.querySelector('.typing-text');
     if (!typingElement) return;
 
-    const phrases = ['Human Being', 'Self-Taught Developer', 'Science & AI Enthusiast'];
+    const phrases = ['Human Being', 'Passionate Builder', 'Science & AI Enthusiast'];
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -164,6 +219,97 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         });
       });
+    });
+  });
+})();
+
+// --- Konami Mode (site-wide) ---
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const sequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    const matrixChars = '01<>[]{}$#*+-';
+    let sequenceIndex = 0;
+    let activeTimer;
+    let isActive = false;
+
+    function buildKonamiOverlay() {
+      let overlay = document.getElementById('konami-overlay');
+      if (overlay) return overlay;
+
+      overlay = document.createElement('div');
+      overlay.id = 'konami-overlay';
+      overlay.className = 'konami-overlay';
+      overlay.setAttribute('aria-hidden', 'true');
+
+      for (let i = 0; i < 42; i++) {
+        const char = document.createElement('span');
+        char.className = 'konami-char';
+        char.textContent = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+        char.style.setProperty('--x', (Math.random() * 100).toFixed(2) + '%');
+        char.style.setProperty('--delay', (Math.random() * 1.6).toFixed(2) + 's');
+        char.style.setProperty('--duration', (2.6 + (Math.random() * 2.1)).toFixed(2) + 's');
+        char.style.setProperty('--opacity', (0.25 + (Math.random() * 0.6)).toFixed(2));
+        char.style.setProperty('--size', (0.85 + (Math.random() * 0.9)).toFixed(2) + 'rem');
+        overlay.appendChild(char);
+      }
+
+      document.body.appendChild(overlay);
+      return overlay;
+    }
+
+    function deactivateKonamiMode() {
+      isActive = false;
+      const overlay = document.getElementById('konami-overlay');
+
+      if (!overlay) return;
+
+      overlay.classList.remove('is-visible');
+      window.setTimeout(function () {
+        if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      }, 280);
+    }
+
+    function activateKonamiMode() {
+      const overlay = buildKonamiOverlay();
+      if (!overlay) return;
+
+      isActive = true;
+      overlay.classList.add('is-visible');
+      showEasterToast('Konami mode activated', 1800);
+
+      if (activeTimer) clearTimeout(activeTimer);
+      activeTimer = window.setTimeout(deactivateKonamiMode, 6000);
+    }
+
+    function normalizeKey(key) {
+      return key.length === 1 ? key.toLowerCase() : key;
+    }
+
+    document.addEventListener('keydown', function (event) {
+      const target = event.target;
+      const tag = target && target.tagName ? target.tagName.toLowerCase() : '';
+      if (target && (target.isContentEditable || tag === 'input' || tag === 'textarea' || tag === 'select')) {
+        return;
+      }
+
+      const key = normalizeKey(event.key);
+      const expected = sequence[sequenceIndex];
+
+      if (key === expected) {
+        sequenceIndex++;
+        if (sequenceIndex === sequence.length) {
+          sequenceIndex = 0;
+          activateKonamiMode();
+        }
+        return;
+      }
+
+      sequenceIndex = key === sequence[0] ? 1 : 0;
+
+      if (isActive && key === 'Escape') {
+        if (activeTimer) clearTimeout(activeTimer);
+        deactivateKonamiMode();
+      }
     });
   });
 })();

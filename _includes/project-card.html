@@ -46,10 +46,27 @@
           {% for teammate_id in include.teammates %}
             {% for mate in site.data.teammates %}
               {% if mate.id == teammate_id %}
-                <a href="{{ mate.github }}" target="_blank" class="teammate-chip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ mate.name }}">
-                  <img src="https://github.com/{{ mate.github_username }}.png?size=44" alt="{{ mate.name }}" loading="lazy">
+                {% if mate.github and mate.github != "" %}
+                  <a href="{{ mate.github }}" target="_blank" rel="noopener noreferrer" class="teammate-chip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ mate.name }}">
+                {% else %}
+                  <span class="teammate-chip teammate-chip-static" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ mate.name }}">
+                {% endif %}
+                  {% if mate.github_username and mate.github_username != "" %}
+                    <img src="https://github.com/{{ mate.github_username }}.png?size=44" alt="{{ mate.name }}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+                    <span class="teammate-avatar-fallback" aria-hidden="true" style="display: none;">
+                      <i class="bi bi-person-fill"></i>
+                    </span>
+                  {% else %}
+                    <span class="teammate-avatar-fallback" aria-hidden="true">
+                      <i class="bi bi-person-fill"></i>
+                    </span>
+                  {% endif %}
                   {{ mate.name }}
-                </a>
+                {% if mate.github and mate.github != "" %}
+                  </a>
+                {% else %}
+                  </span>
+                {% endif %}
               {% endif %}
             {% endfor %}
           {% endfor %}
