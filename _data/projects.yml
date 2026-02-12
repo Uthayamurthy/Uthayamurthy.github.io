@@ -1,3 +1,83 @@
+# WASP
+- title: "WASP"
+  subtitle: "(**W**ireless **A**stralis **S**atellite **P**ayload"
+  img_src: "assets/images/wasp.jpeg"
+  img_alt: "WASP Photo"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Under Active Development !", "Hardware + Software", "Closed Source"]
+  project_type: "collab"
+  teammates: ["ammog", "yashasvee", "krithik"]
+  description: "WASP is a Ground Based CubeSat developed to demonstrate the working of satellite systems. Built for Ingenium Hardware Hackathon 2026@NIT Trichy"
+  video_link: "https://drive.google.com/file/d/1MlsM4FWQlGh8K54hae9m1U05fVDpoO6V/view?usp=sharing"
+  date: "2026"
+
+# Mantis
+- title: "MANTIS"
+  subtitle: "(**M**ission **AN**alysis and **T**elemetry **I**nterface **S**ystem)"
+  img_src: "assets/images/mantis.png"
+  img_alt: "MANTIS Screenshot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Under Active Development !", "Closed Source"]
+  project_type: "collab"
+  teammates: ["ammog"]
+  description: "MANTIS is a comprehensive ground control station for CubeSat operations. It features a high-performance, real-time telemetry dashboard and a robust backend for serial communication. It was built for WASP"
+  video_link: "https://drive.google.com/file/d/1MlsM4FWQlGh8K54hae9m1U05fVDpoO6V/view?usp=sharing"
+  date: "2026"
+
+# AURA
+- title: "AURA"
+  subtitle: "(**A**ttendance **U**sing **R**ealtime **A**uthentication)"
+  img_src: "assets/images/aura.png"
+  img_alt: "AURA Screenshot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Under Active Development !", "Closed Source","Hardware + Software"]
+  project_type: "collab"
+  teammates: ["vicfic"]
+  description: "A Smart Attendance System Powered by BLE Beacons. Transforms attendance taking from a tedious procedure into a tap of button on phone while remaining secure. More info on this soon !"
+  date: "2025-26"
+
+
+# PrepVerse
+- title: "PrepVerse"
+  img_src: "assets/images/prepverse.png"
+  img_alt: "PrepVerse Guru Mode Screenshot"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Open Source"]
+  project_type: "collab"
+  teammates: ["pranav", "sanghamithra", "ruusheeka"]
+  description: "Adaptive learning platform combining AI-powered tutoring, focus tools, and peer collaboration. Built for PEC Hacks 3.0. I devised and developed the novel feature Guru-Mode."
+  github_link: "https://github.com/Son-Of-Zeus/Prepverse/tree/main"
+  date: "2025"
+
+# Litewing
+- title: "LiteWing"
+  img_src: "assets/images/litewing.png"
+  img_alt: "Litewing Photo"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Built Just for Fun !"]
+  project_type: "solo"
+  description: "Built a kutty drone to get back into hardware after a long post-COVID break. Planning to write custom firmware for it soon."
+  video_link: "https://drive.google.com/file/d/1G5_AnCkMFh5UicVigtqn8HZjVLdYenFk/view?usp=sharing"
+  date: "2025"
+
+# INGRES Bot
+- title: "INGRES Bot"
+  img_src: "assets/images/ingresbot.png"
+  img_alt: "INGRES BOT"
+  img_height: "400"
+  img_width: "400"
+  tags: ["Open Source"]
+  project_type: "collab"
+  teammates: ["vicfic", "pranav", "sanghamithra", "thejaswini", "shreekrishna"]
+  description: "INGRES Bot is a prototype chatbot platform built by Team Hydrolings (lead by me) for SIH 2025. It combines a FastAPI backend and a Next.js frontend to answer groundwater-related questions from an ingested knowledge base. I worked on the RAG Pipeline with Citations"
+  github_link: "https://github.com/Uthayamurthy/INGRES-BOT"
+  date: "2025"
+
 # Study Flow
 - title: "Study Flow"
   img_src: "assets/images/studyflow.png"
@@ -6,7 +86,7 @@
   img_width: "400"
   tags: ["Open Source"]
   project_type: "collab"
-  teammates: ["placeholder_teammate"]
+  teammates: ["vicfic"]
   description: "An AI Powered Study Assistant. I built the backend for this project"
   github_link: "https://github.com/Uthayamurthy/studyflow"
   date: "2025"

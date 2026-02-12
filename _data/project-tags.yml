@@ -4,6 +4,9 @@
 - name: "Maintenance Only"
   theme: "text-bg-info"
 
+- name: "Built Just for Fun !"
+  theme: "text-bg-success"
+
 - name: "Unreleased"
   theme: "text-bg-info"
 

@@ -2,7 +2,44 @@
 # Add team members you've worked with on projects.
 # Reference them by their id in projects.yml under the "teammates" field.
 
-- id: "placeholder_teammate"
-  name: "Teammate Name"
-  github: "https://github.com/placeholder"
-  github_username: "placeholder"
+- id: "vicfic"
+  name: "Varghese"
+  github: "https://github.com/vicfic18"
+  github_username: "vicfic18"
+
+- id: "ammog"
+  name: "Ammog"
+  github: "https://github.com/Amps-ammog"
+  github_username: "Amps-ammog"
+
+- id: "yashasvee"
+  name: "Yashasvee"
+
+- id: "krithik"
+  name: "Krithik"
+
+- id: "pranav"
+  name: "Pranav"
+  github: "https://github.com/Son-Of-Zeus"
+  github_username: "Son-Of-Zeus"
+
+- id: "sanghamithra"
+  name: "Sanghamithra"
+  github: "https://github.com/Sanghamithra259"
+  github_username: "Sanghamithra259"
+
+- id: "thejaswini"
+  name: " Thejaswini-VS "
+  github: "https://github.com/Thejaswini-VS"
+  github_username: "Thejaswini-VS"
+
+- id: "shreekrishna"
+  name: "Sree Krishna"
+  github: "https://github.com/SSK166"
+  github_username: "SSK166"
+
+
+- id: "ruusheeka"
+  name: "Ruusheka"
+  github: "https://github.com/Ruusheka"
+  github_username: "Ruusheka"
