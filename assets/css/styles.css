@@ -109,6 +109,40 @@ a:hover {
   padding: 0.75rem 0;
 }
 
+.navbar .brand-signature {
+  display: inline-block;
+  color: var(--text-primary);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.45px;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.navbar .brand-name {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.navbar .brand-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.28rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), transparent 85%);
+  opacity: 0.9;
+}
+
+.navbar .brand-signature:hover,
+.navbar .brand-signature:focus-visible {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .navbar .nav-link {
   color: var(--text-secondary);
   font-weight: 500;
@@ -152,6 +186,12 @@ a:hover {
   color: var(--accent);
   border-color: var(--accent);
   transform: rotate(15deg);
+}
+
+@media (max-width: 576px) {
+  .navbar .brand-signature {
+    font-size: 1.2rem;
+  }
 }
 
 /* ============================================

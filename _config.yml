@@ -1,3 +1,5 @@
 url: "uthayamurthy.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "https://uthayamurthy.github.io" # the subpath of your site, e.g. /blog
 title: "Uthay's Website"
+description: "R Uthaya Murthy - Passionate Builder, Science & AI enthusiast. Explore my projects, blogs, and more."
+author: "R Uthaya Murthy"
